@@ -23,6 +23,6 @@ From the terminal,  change to the root directory of this project.  Verify that y
 Development
 -----------
 
-Questions or problems? Please post them on the [issue tracker](). You can contribute changes by forking the project and submitting a pull request.
+Questions or problems? Please post them on the [issue tracker](https://github.com/codemis/open_bible_stories_rendering_engine/issues). You can contribute changes by forking the project and submitting a pull request.
 
 This script is created by Johnathan Pulos and is under the [GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
