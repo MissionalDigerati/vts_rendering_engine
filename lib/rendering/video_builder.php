@@ -82,7 +82,9 @@ class VideoBuilder {
 		 * @link http://www.brooksandrus.com/blog/2008/06/06/mp4box-mpeg-4-h264-metadata-cutting-merging-tool/
 		 * @author Johnathan Pulos
 		 */
-		$command = "MP4Box " . implode(' -cat ', $this->clips) . " -out " . $this->final_file_directory . $final_file_name . ".mp4";
+		$first_clip = $this->clips[0];
+		$cat_files = array_shift($this->clips);
+		$command = "MP4Box -force-cat -add ". $first_clip ." -cat ". implode(' -cat ', $this->clips) . " " . $this->final_file_directory . $final_file_name . ".mp4";
 		echo "EXECUTING: ".$command."\r\n";
 		@shell_exec($command);
 	}
