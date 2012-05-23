@@ -23,7 +23,7 @@
  * 
  * This class combines multiple videos into a single movie.
  * This library requires {@link http://pear.php.net/ PEAR}, {@link http://ffmpeg.org/ FFMPEG}, {@link https://github.com/char0n/ffmpeg-php ffmpeg-php} and 
- * {@link http://gpac.wp.mines-telecom.fr/ MP4Box from GPAC library} in order to use.
+ * {@link MP4Box from GPAC library} in order to use.
  *
  * @author Johnathan Pulos
  * @version 1.0
@@ -76,15 +76,9 @@ class VideoBuilder {
 	 * @author Johnathan Pulos
 	 */
 	function process($final_file_name) {
-		/**
-		 * MP4Box completed/8_sec_audio.mp4 -cat completed/14_sec_audio.mp4 -out completed/bible_story_project.mp4
-		 * 
-		 * @link http://www.brooksandrus.com/blog/2008/06/06/mp4box-mpeg-4-h264-metadata-cutting-merging-tool/
-		 * @author Johnathan Pulos
-		 */
 		$first_clip = $this->clips[0];
 		$cat_files = array_shift($this->clips);
-		$command = "MP4Box -force-cat -add ". $first_clip ." -cat ". implode(' -cat ', $this->clips) . " " . $this->final_file_directory . $final_file_name . ".mp4";
+		$command = "MP4Box -force-cat ". $first_clip ." -cat ". implode(' -cat ', $this->clips) . " -out " . $this->final_file_directory . $final_file_name . ".mp4";
 		echo "EXECUTING: ".$command."\r\n";
 		@shell_exec($command);
 	}
