@@ -68,7 +68,7 @@ class VideoBuilder {
 	}
 	
 	/**
-	 * Process the video builder by adding the clips together in the order they were recieved
+	 * Process the video builder by adding the clips together in the order they were received
 	 *
 	 * @var string final_file_name the final filename to process
 	 * @return string the final file location and name of completed file
