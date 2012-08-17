@@ -8,7 +8,12 @@ Package
 
 This is part of the Video Translating Service Package (VTS) which consists of the following repositories:
 
-* [Rendering Engine](https://github.com/MissionalDigerati/vts_rendering_engine)
+* [VTS API](https://github.com/MissionalDigerati/vts_api)
+	* Submodule - [VTS Rendering Engine](https://github.com/MissionalDigerati/vts_rendering_engine)
+* [VTS CakePHP Web Interface](https://github.com/MissionalDigerati/vts_web_interface)	
+	* Submodule - [VTS CakePHP 2 Plugin](https://github.com/MissionalDigerati/vts_cakephp_plugin)
+	
+To use this service, you will need one instance of the [VTS API](https://github.com/MissionalDigerati/vts_api) running on a stand alone server, and the [VTS CakePHP Web Interface](https://github.com/MissionalDigerati/vts_web_interface) running on a separate server.
 
 Requirements
 ------------
